@@ -84,7 +84,7 @@
       <!--PRESSURE-->
       <div class="card">
         <p><i class="fa-solid fa-wind fa-rotate-270" style="color:#e47637;"></i>CARBON MONOXIDE</p>
-        <p><span class="value"><span id="cogas"></span> ppm</span></p>
+        <p><span class="value"><span id="cogas"></span></span></p>
       </div>
   
           
@@ -146,8 +146,9 @@
 	  var database = firebase.database();
 
 	  //getting reference to the data we want
-	  var dataRef1 = database.ref('test/int');
-	  var dataRef2 = database.ref('test/float');
+	  var dataRef1 = database.ref('test/hum');
+	  var dataRef2 = database.ref('test/temp');
+    var dataRef3 = database.ref('test/cogas');
 
 	  //fetch the data
 	  dataRef1.on('value', function(getdata1){
@@ -158,6 +159,11 @@
 	   dataRef2.on('value', function(getdata2){
 	  	var temp = getdata2.val();
 	  	document.getElementById('temperature').innerHTML = temp + "&#8451;";
+	  })
+
+    dataRef3.on('value', function(getdata3){
+	  	var cogase = getdata3.val();
+	  	document.getElementById('cogas').innerHTML = cogase + "ppm";
 	  })
     
 
