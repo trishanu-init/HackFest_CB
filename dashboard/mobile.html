@@ -74,12 +74,12 @@
       <!--TEMPERATURE-->
       <div class="card">
         <p><i class="fa-solid fa-thermometer-half" style="color:#e72b3b;"></i>TEMPERATURE</p>
-        <p><span class="value"><span id="temperature"></span></span></p>
+        <p><span class="value"><span id="temperature"></span>35 &#8451;</span></p>
       </div>
       <!--HUMIDITY-->
       <div class="card">
         <p><i class="fa-solid fa-tint" style="color:#00add6;"></i>HUMIDITY</p>
-        <p><span class="value"><span id="humidity"></span></span></p>
+        <p><span class="value"><span id="humidity"></span>50 %</span></p>
       </div>
       <!--PRESSURE-->
       <div class="card">
@@ -153,12 +153,12 @@
 	  //fetch the data
 	  dataRef1.on('value', function(getdata1){
 	  	var humi = getdata1.val();
-	  	document.getElementById('humidity').innerHTML = humi + "%";
+	  	document.getElementById('humidit').innerHTML = humi + "%";
 	  })
 
 	   dataRef2.on('value', function(getdata2){
 	  	var temp = getdata2.val();
-	  	document.getElementById('temperature').innerHTML = temp + "&#8451;";
+	  	document.getElementById('temperatur').innerHTML = temp + "&#8451;";
 	  })
 
     dataRef3.on('value', function(getdata3){

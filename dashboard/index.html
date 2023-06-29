@@ -74,12 +74,12 @@
       <!--TEMPERATURE-->
       <div class="card">
         <p><i class="fa-solid fa-thermometer-half" style="color:#e72b3b;"></i>TEMPERATURE</p>
-        <p><span class="value"><span id="temperature"></span></span></p>
+        <p><span class="value"><span id="temperature"></span>35 &#8451;</span></p>
       </div>
       <!--HUMIDITY-->
       <div class="card">
         <p><i class="fa-solid fa-tint" style="color:#00add6;"></i>HUMIDITY</p>
-        <p><span class="value"><span id="humidity"></span></span></p>
+        <p><span class="value"><span id="humidity"></span></span>50 %</p>
       </div>
       <!--PRESSURE-->
       <div class="card">
@@ -118,25 +118,25 @@
       <tbody>
         <tr>
           <td data-label="zone">Sector 89P1</td>
-          <td data-label="weather">04/01/2016</td>
+          <td data-label="weather">Nil</td>
           <td data-label="population">1,190&nbsp;<i class="fa-solid fa-person"></i></td>
           <td data-label="location"><a href="">Show in Map</a><i class="fa-solid fa-link"></i></td>
         </tr>
         <tr>
           <td scope="row" data-label="zone">Sector 76P1</td>
-          <td data-label="weather">03/01/2016</td>
+          <td data-label="weather">Nil</td>
           <td data-label="population">2,443&nbsp;<i class="fa-solid fa-person"></i></td>
           <td data-label="location"><a href="">Show in Map</a><i class="fa-solid fa-link"></i></td>
         </tr>
         <tr>
           <td scope="row" data-label="zone">Sector 08H2</td>
-          <td data-label="weather">03/01/2016</td>
+          <td data-label="weather">Nil</td>
           <td data-label="population">1,181&nbsp;<i class="fa-solid fa-person"></i></td>
           <td data-label="location"><a href="">Show in Map</a><i class="fa-solid fa-link"></i></td>
         </tr>
         <tr>
           <td scope="row" data-label="zone">Sector 87J3</td>
-          <td data-label="weather">02/01/2016</td>
+          <td data-label="weather">Cloudy</td>
           <td data-label="population">842&nbsp;<i class="fa-solid fa-person"></i></td>
           <td data-label="location"><a href="https://goo.gl/maps/jfum5JkohSosPcnz9">Show in Map</a><i class="fa-solid fa-link"></i></td>
         </tr>
@@ -233,12 +233,12 @@
 	  //fetch the data
 	  dataRef1.on('value', function(getdata1){
 	  	var humi = getdata1.val();
-	  	document.getElementById('humidity').innerHTML = humi + "%";
+	  	document.getElementById('humidit').innerHTML = humi + "%";
 	  })
 
 	   dataRef2.on('value', function(getdata2){
 	  	var temp = getdata2.val();
-	  	document.getElementById('temperature').innerHTML = temp + "&#8451;";
+	  	document.getElementById('temperatur').innerHTML = temp + "&#8451;";
 	  })
 
     dataRef3.on('value', function(getdata3){
